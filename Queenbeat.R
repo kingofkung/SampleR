@@ -27,5 +27,12 @@ coords <- locator(type = "l")
 
 ## b1 <- cutw(s1, from = 0, to = .4, xunit = "time", output = "Wave")
 b1 <- cw(s1, 0, .38)
-## b2 <- c2(s1, .4, .
-listen(b1)
+b2 <- cw(s1, .39, .78)
+c1 <- cw(s1, .8, 1.2)
+
+plot(s1)
+locatr()
+
+listen(s1, choose = TRUE)
+listen(b2)
+listen(c1)
