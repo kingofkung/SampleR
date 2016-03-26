@@ -23,15 +23,15 @@ as.data.frame(which(s1@left == min(abs(s1@left))))
 
 plot(s1, xaxt = "n")
 axis(1, at = seq(0, 1.5, .05))
-coords <- locator(type = "l")
-
+## locatr()
 ## b1 <- cutw(s1, from = 0, to = .4, xunit = "time", output = "Wave")
 b1 <- cw(s1, 0, .38)
 b2 <- cw(s1, .39, .78)
 c1 <- cw(s1, .8, 1.2)
 
 plot(s1)
-locatr()
+
+## locatr()
 
 listen(s1, choose = TRUE)
 listen(b2)
