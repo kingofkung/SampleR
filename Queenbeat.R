@@ -39,12 +39,26 @@ listen(b2)
 listen(c1)
 listen(b1)
 
+plot(b2)
 
-samplebeat <- pw(pw(pw(pw(b2, sil), c1),sil), s1)
-listen(samplebeat)
+fulbeats <- c(b2, sil, c1, sil, s1) ## How can I make a recursive thing that pastes these together?
 
-for(i in 1:5) if(i == 1) beat <- pw(samplebeat, samplebeat) else { beat <- pw(beat, samplebeat)}
+## paste together first two
+## then paste together that paste, next one
+## then paste together that paste, next one
+## until we run out of things to paste
 
-plot(samplebeat)
+myfirstbeat <- pwbulk(fulbeats)
+
+
+
+listen(myfirstbeat)
+
+##Loop it! 8 times
+## for(i in 1:8) if(i == 1) beat <-  samplebeat else { beat <- pw(beat, samplebeat)}
+
+loopr(myfirstbeat, 3)
+
+plot(beat)
 
 listen(beat)
