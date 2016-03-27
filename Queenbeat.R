@@ -25,14 +25,26 @@ plot(s1, xaxt = "n")
 axis(1, at = seq(0, 1.5, .05))
 ## locatr()
 ## b1 <- cutw(s1, from = 0, to = .4, xunit = "time", output = "Wave")
-b1 <- cw(s1, 0, .38)
-b2 <- cw(s1, .39, .78)
+b1 <- cw(s1, 0, .3825)
+b2 <- cw(s1, .39, .805)
 c1 <- cw(s1, .8, 1.2)
+sil <- cw(s1, 1.2, 1.5)
 
 plot(s1)
 
 ## locatr()
 
-listen(s1, choose = TRUE)
+## listen(s1, choose = TRUE)
 listen(b2)
 listen(c1)
+listen(b1)
+
+
+samplebeat <- pw(pw(pw(pw(b2, sil), c1),sil), s1)
+listen(samplebeat)
+
+for(i in 1:5) if(i == 1) beat <- pw(samplebeat, samplebeat) else { beat <- pw(beat, samplebeat)}
+
+plot(samplebeat)
+
+listen(beat)
