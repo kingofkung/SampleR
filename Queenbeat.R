@@ -43,13 +43,7 @@ plot(b2)
 
 fulbeats <- c(b2, sil, c1, sil, s1) ## How can I make a recursive thing that pastes these together?
 
-## paste together first two
-## then paste together that paste, next one
-## then paste together that paste, next one
-## until we run out of things to paste
-
-## myfirstbeat <- pwbulk(fulbeats)
-## Better way than using "pwbulk"
+## Better way than recursion
 myfirstbeat <- do.call(bind, fulbeats)
 
 
