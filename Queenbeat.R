@@ -48,8 +48,9 @@ fulbeats <- c(b2, sil, c1, sil, s1) ## How can I make a recursive thing that pas
 ## then paste together that paste, next one
 ## until we run out of things to paste
 
-myfirstbeat <- pwbulk(fulbeats)
-
+## myfirstbeat <- pwbulk(fulbeats)
+## Better way than using "pwbulk"
+myfirstbeat <- do.call(bind, fulbeats)
 
 
 listen(myfirstbeat)
