@@ -19,7 +19,9 @@ pwbulk <- function(beatlist) {
 }
 
 ## And custom cut function
-cw <- function(sound, t1, t2) cutw(sound, from = t1, to = t2, xunit = "time", output = "Wave")
+## cw <- function(sound, t1, t2) cutw(sound, from = t1, to = t2, xunit = "time", output = "Wave")
+
+cw <- function(sound, t1, t2) extractWave(sound, from = t1, to = t2, interact = FALSE, xunit = "time")
 
 ## Find some points on the line (npts, to be specific), and show their coordinate
 locatr <- function(npts = 2){
