@@ -8,18 +8,6 @@ library(seewave)
 pw <- function(x1,y1) pastew(x1, y1, at = "start", output = "Wave")
 
 
-##Combine a list of beats together
-pwbulk <- function(beatlist) {
-    for(i in 1:(length(beatlist) - 1)) {
-        if (i ==1 ) samplebeat <- pw(beatlist[[1]], beatlist[[2]])
-        if(i != 1) samplebeat <- pw(samplebeat, beatlist[[i + 1]])
-
-    }
-    samplebeat
-}
-
-## And custom cut function
-## cw <- function(sound, t1, t2) cutw(sound, from = t1, to = t2, xunit = "time", output = "Wave")
 
 cw <- function(sound, t1, t2) extractWave(sound, from = t1, to = t2, interact = FALSE, xunit = "time")
 
