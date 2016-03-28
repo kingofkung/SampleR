@@ -54,6 +54,6 @@ listen(myfirstbeat)
 
 loopr(myfirstbeat, 3)
 
-plot(beat)
+plot(myfirstbeat)
 
-listen(beat)
+## listen(beat)
