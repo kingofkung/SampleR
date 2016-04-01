@@ -22,7 +22,7 @@ locatr <- function(npts = 2){
 ## Create a loop and playback function
 loopr <- function(thebeat, ntimes = 1, hear = TRUE, giveback = TRUE){
     for(i in 1:ntimes) {if(i == 1) beat <-  thebeat
-                   else { beat <- pw(beat, thebeat)}}
+                   else { beat <- do.call(bind, c(beat, thebeat))}}
 
     if(hear == TRUE) listen(beat)
     if(giveback) beat

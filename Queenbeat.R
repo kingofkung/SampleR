@@ -9,6 +9,8 @@ song <- readMP3("/Users/bjr/Music/iTunes/iTunes Music/Queen/Queen_ Greatest Hits
 plot(song, xlim = c(1.8, 4), simplify = FALSE, xaxt = "n")
 axis(1, at = seq(0, 5, .1))
 
+par(mfrow =c(2,1))
+
 
 listen(song, from = 1.9, to = 3.1)
 
@@ -54,6 +56,16 @@ listen(myfirstbeat)
 
 loopr(myfirstbeat, 3)
 
+
+do.call(bind, c(myfirstbeat,myfirstbeat))
+
 plot(myfirstbeat)
 
 ## listen(beat)
+
+## equalization (eq)
+## Allows you to change sound (dry vs. Bright)
+## Like tone dial on an electric Guitar
+## Raise high's drop lows
+## 3d plots of same
+## pick their brain on how
