@@ -39,7 +39,8 @@ ct <- function(wavObj, tnew){
 
     ## get old time.
     t.old <- duration(wavObj)
-        wavObj@samp.rate <- wavObj@samp.rate * tnew/t.old
+    wavObj@samp.rate <- wavObj@samp.rate * t.old/tnew
+    wavObj
 }
 
 ## Not sure if necessary, but oh well.

@@ -82,3 +82,7 @@ play(mysecondbeat)
 mythirdbeat <- myfirstbeat
 mythirdbeat@samp.rate <- myfirstbeat@samp.rate * 1.35
 play(mythirdbeat)
+duration(mythirdbeat)
+
+myfourthbeat <- ct(myfirstbeat, 2.2)
+play(myfourthbeat)
