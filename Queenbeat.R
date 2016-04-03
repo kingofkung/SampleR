@@ -54,7 +54,7 @@ listen(myfirstbeat)
 ##Loop it! 8 times
 ## for(i in 1:8) if(i == 1) beat <-  samplebeat else { beat <- pw(beat, samplebeat)}
 
-loopr(myfirstbeat, 3)
+loopr(myfirstbeat, 2)
 
 
 do.call(bind, c(myfirstbeat,myfirstbeat))
