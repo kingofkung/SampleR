@@ -13,7 +13,7 @@ par(mfrow =c(2,1))
 
 
 listen(song, from = 1.9, to = 3.1)
-
+play(song)
 ## Get first sample.
 ## Beat beat clap silence
 ## s1 <- cutw(song, from = 1.9, to = 3.1 + .3, output = "Wave")
@@ -43,13 +43,15 @@ listen(b1)
 
 plot(b2)
 
+fadew(b2, dout = .01, output = "Wave")
+
 fulbeats <- c(b2, sil, c1, sil, s1) ## How can I make a recursive thing that pastes these together?
 
 ## Better way than recursion
 myfirstbeat <- do.call(bind, fulbeats)
 
 
-listen(myfirstbeat)
+play(myfirstbeat)
 
 ##Loop it! 8 times
 ## for(i in 1:8) if(i == 1) beat <-  samplebeat else { beat <- pw(beat, samplebeat)}
@@ -69,3 +71,14 @@ plot(myfirstbeat)
 ## Raise high's drop lows
 ## 3d plots of same
 ## pick their brain on how
+
+## Possible to half the beat's time?
+str(myfirstbeat)
+mysecondbeat <- myfirstbeat
+mysecondbeat@samp.rate <- mysecondbeat@samp.rate * 2
+play(mysecondbeat)
+
+## Well, that does it. But it doesn't quite sound like I wanted...
+mythirdbeat <- myfirstbeat
+mythirdbeat@samp.rate <- myfirstbeat@samp.rate * 1.35
+play(mythirdbeat)
