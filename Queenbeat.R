@@ -86,3 +86,9 @@ duration(mythirdbeat)
 
 myfourthbeat <- ct(myfirstbeat, 2.2)
 play(myfourthbeat)
+plot(myfourthbeat)
+
+## So how can I play with the frequencies to give me a deeper/tinnier sound?
+myfifthbeat <- myfourthbeat
+summary(myfifthbeat)
+
