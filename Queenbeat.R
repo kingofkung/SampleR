@@ -13,7 +13,7 @@ par(mfrow =c(2,1))
 
 
 listen(song, from = 1.9, to = 3.1)
-play(song)
+## play(song)
 ## Get first sample.
 ## Beat beat clap silence
 ## s1 <- cutw(song, from = 1.9, to = 3.1 + .3, output = "Wave")
@@ -89,6 +89,7 @@ play(myfourthbeat)
 plot(myfourthbeat)
 
 ## So how can I play with the frequencies to give me a deeper/tinnier sound?
-myfifthbeat <- myfourthbeat
+myfifthbeat <- myfirstbeat
 summary(myfifthbeat)
-
+myfifthbeat <- ct(myfifthbeat, 5.84)
+play(myfifthbeat)
