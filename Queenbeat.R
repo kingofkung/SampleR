@@ -4,7 +4,7 @@ source("PreReqs.R")
 
 
 
-song <- readMP3("/Users/bjr/Music/iTunes/iTunes Music/Queen/Queen_ Greatest Hits I & II/16 We Will Rock You.mp3")
+song <- readMP3("/Users/bjr/Music/iTunes/iTunes Music/Queen/Queen_ Greatest Hits I & II/1-16 We Will Rock You.mp3")
 
 plot(song, xlim = c(1.8, 4), simplify = FALSE, xaxt = "n")
 axis(1, at = seq(0, 5, .1))
